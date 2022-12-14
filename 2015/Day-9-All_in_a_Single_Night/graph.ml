@@ -2,7 +2,7 @@ type 'a vertex  = 'a
 type 'a edge    = {v1 : 'a vertex; v2 : 'a vertex; cost : int}
 type 'a graph   = { vertex : ('a vertex) list; edges : ('a edge) list}
 
-let create_graph = {vertex = []; edges = []}
+let create_graph () = {vertex = []; edges = []}
 
 let add_edge e graph = 
   {vertex = graph.vertex; edges = (e::(graph.edges))}
