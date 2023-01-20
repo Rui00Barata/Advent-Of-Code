@@ -67,6 +67,9 @@ let path_to_cost graph path =
 
 
 let find_best_path paths graph =
+  let compare a b =
+    compare b a
+  in
   List.hd (List.fast_sort compare (List.map (path_to_cost graph) paths))
 
     
